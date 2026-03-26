@@ -26,6 +26,7 @@
 #include "deca_device_api.h"
 #include "deca_regs.h"
 #include "port_platform.h"
+#include "BLE/ble_manager.h"
 
 #define APP_NAME "SS TWR INIT v1.3"
 
@@ -54,7 +55,7 @@ static uint8 rx_buffer[RX_BUF_LEN];
 static uint32 status_reg = 0;
 
 /* UWB microsecond (uus) to device time unit (dtu, around 15.65 ps) conversion factor.
-* 1 uus = 512 / 499.2 µs and 1 µs = 499.2 * 128 dtu. */
+* 1 uus = 512 / 499.2 ï¿½s and 1 ï¿½s = 499.2 * 128 dtu. */
 #define UUS_TO_DWT_TIME 65536
 
 /* Speed of light in air, in metres per second. */
@@ -163,6 +164,11 @@ int ss_init_run(void)
       tof = ((rtd_init - rtd_resp * (1.0f - clockOffsetRatio)) / 2.0f) * DWT_TIME_UNITS; // Specifying 1.0f and 2.0f are floats to clear warning 
       distance = tof * SPEED_OF_LIGHT;
       printf("Distance : %f\r\n",distance);
+
+      //Gá»­i BLE
+      char ble_buf[32];
+      int  ble_len = snprintf(ble_buf, sizeof(ble_buf), "DIST:%.2f\r\n", distance);
+      ble_manager_send((uint8_t *)ble_buf, (uint16_t)ble_len);
     }
   }
   else
