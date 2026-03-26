@@ -69,6 +69,10 @@ extern "C" {
 #endif
 
 
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
 /* -------------------------  Interrupt Number Definition  ------------------------ */
 
 typedef enum {

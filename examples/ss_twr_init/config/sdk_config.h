@@ -8754,6 +8754,117 @@
 // </h> 
 //==========================================================
 
+
+// ==========================================================
+// BLE / SoftDevice S132 config (them cho ble_manager)
+// ==========================================================
+
+// nrf_sdh - SoftDevice Handler
+#ifndef NRF_SDH_ENABLED
+#define NRF_SDH_ENABLED 1
+#endif
+#ifndef NRF_SDH_CLOCK_LF_SRC
+#define NRF_SDH_CLOCK_LF_SRC 1
+#endif
+#ifndef NRF_SDH_CLOCK_LF_RC_CTIV
+#define NRF_SDH_CLOCK_LF_RC_CTIV 0
+#endif
+#ifndef NRF_SDH_CLOCK_LF_RC_TEMP_CTIV
+#define NRF_SDH_CLOCK_LF_RC_TEMP_CTIV 0
+#endif
+#ifndef NRF_SDH_CLOCK_LF_ACCURACY
+#define NRF_SDH_CLOCK_LF_ACCURACY 7
+#endif
+#ifndef NRF_SDH_DISPATCH_MODEL
+#define NRF_SDH_DISPATCH_MODEL 1
+#endif
+#ifndef NRF_SDH_REQ_OBSERVER_PRIO_LEVELS
+#define NRF_SDH_REQ_OBSERVER_PRIO_LEVELS 2
+#endif
+#ifndef NRF_SDH_STATE_OBSERVER_PRIO_LEVELS
+#define NRF_SDH_STATE_OBSERVER_PRIO_LEVELS 2
+#endif
+#ifndef NRF_SDH_STACK_OBSERVER_PRIO_LEVELS
+#define NRF_SDH_STACK_OBSERVER_PRIO_LEVELS 2
+#endif
+
+// nrf_sdh_ble - SoftDevice BLE
+#ifndef NRF_SDH_BLE_ENABLED
+#define NRF_SDH_BLE_ENABLED 1
+#endif
+#ifndef NRF_SDH_BLE_PERIPHERAL_LINK_COUNT
+#define NRF_SDH_BLE_PERIPHERAL_LINK_COUNT 1
+#endif
+#ifndef NRF_SDH_BLE_CENTRAL_LINK_COUNT
+#define NRF_SDH_BLE_CENTRAL_LINK_COUNT 0
+#endif
+#ifndef NRF_SDH_BLE_TOTAL_LINK_COUNT
+#define NRF_SDH_BLE_TOTAL_LINK_COUNT 1
+#endif
+#ifndef NRF_SDH_BLE_GAP_EVENT_LENGTH
+#define NRF_SDH_BLE_GAP_EVENT_LENGTH 6
+#endif
+#ifndef NRF_SDH_BLE_GATT_MAX_MTU_SIZE
+#define NRF_SDH_BLE_GATT_MAX_MTU_SIZE 247
+#endif
+#ifndef NRF_SDH_BLE_GATTS_ATTR_TAB_SIZE
+#define NRF_SDH_BLE_GATTS_ATTR_TAB_SIZE 1408
+#endif
+#ifndef NRF_SDH_BLE_VS_UUID_COUNT
+#define NRF_SDH_BLE_VS_UUID_COUNT 1
+#endif
+#ifndef NRF_SDH_BLE_SERVICE_CHANGED
+#define NRF_SDH_BLE_SERVICE_CHANGED 0
+#endif
+#ifndef NRF_SDH_BLE_OBSERVER_PRIO_LEVELS
+#define NRF_SDH_BLE_OBSERVER_PRIO_LEVELS 4
+#endif
+
+// nrf_sdh_soc
+#ifndef NRF_SDH_SOC_ENABLED
+#define NRF_SDH_SOC_ENABLED 1
+#endif
+#ifndef NRF_SDH_SOC_OBSERVER_PRIO_LEVELS
+#define NRF_SDH_SOC_OBSERVER_PRIO_LEVELS 2
+#endif
+
+// nrf_ble_gatt
+#ifndef NRF_BLE_GATT_ENABLED
+#define NRF_BLE_GATT_ENABLED 1
+#endif
+
+// ble_advertising
+#ifndef BLE_ADVERTISING_ENABLED
+#define BLE_ADVERTISING_ENABLED 1
+#endif
+
+// ble_conn_params
+#ifndef BLE_CONN_PARAMS_ENABLED
+#define BLE_CONN_PARAMS_ENABLED 1
+#endif
+#ifndef BLE_CONN_PARAMS_MAX_SLAVE_LATENCY_DEVIATION
+#define BLE_CONN_PARAMS_MAX_SLAVE_LATENCY_DEVIATION 499
+#endif
+#ifndef BLE_CONN_PARAMS_MAX_SUPERVISION_TIMEOUT_DEVIATION
+#define BLE_CONN_PARAMS_MAX_SUPERVISION_TIMEOUT_DEVIATION 65535
+#endif
+
+// ble_nus
+#ifndef BLE_NUS_ENABLED
+#define BLE_NUS_ENABLED 1
+#endif
+#ifndef BLE_NUS_CONFIG_LOG_ENABLED
+#define BLE_NUS_CONFIG_LOG_ENABLED 0
+#endif
+
+// nrf_sdh_freertos
+#ifndef NRF_SDH_FREERTOS_USE_WAIT_FOR_EVENT
+#define NRF_SDH_FREERTOS_USE_WAIT_FOR_EVENT 0
+#endif
+
+// ==========================================================
+
 // <<< end of configuration section >>>
 #endif //SDK_CONFIG_H
+
 

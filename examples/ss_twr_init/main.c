@@ -58,6 +58,10 @@ static dwt_config_t config = {
 #define POLL_TX_TO_RESP_RX_DLY_UUS 100 
 
 /*Should be accurately calculated during calibration*/
+#ifdef TX_ANT_DLY
+#undef TX_ANT_DLY
+#endif
+
 #define TX_ANT_DLY 16300
 #define RX_ANT_DLY 16456	
 
